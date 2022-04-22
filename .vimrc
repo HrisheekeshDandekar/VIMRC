@@ -1,7 +1,8 @@
-syntax on
+::q:qsyntax on
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
+set autoindent
 set smartindent
 set nu
 set relativenumber
@@ -39,21 +40,21 @@ set termguicolors
 syntax enable
 set background=dark
 "colorscheme base16-brewer
-"colorscheme base16-ocean
+colorscheme base16-ocean
 "colorscheme paramount
-colorscheme monochrome
+"colorscheme monochrome
 
 
 "   === Split divider color [HORIZONTAL] ===
 hi statusline   ctermfg=fg  cterm=bold,underline
-hi StatusLine ctermbg=black ctermfg=black
+hi StatusLine ctermbg=Black ctermfg=Black
 "hi StatusLinenc ctermbg=black ctermfg=black
 "hi statusline   ctermfg=fg  cterm=bold,underline
-hi statuslinenc ctermfg=grey  cterm=underline
+hi statuslinenc ctermfg=Black cterm=underline
 "hi vertsplit    ctermfg=fg  cterm=NONE
 
 "   === Split divider color ===
-highlight VertSplit guibg=Orange guifg=Black ctermbg=6 ctermfg=0
+highlight VertSplit guibg=2B303B guifg=Black ctermbg=6 ctermfg=0
 
 "	=== Map autocompleate to <tab> ===
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
@@ -224,23 +225,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
