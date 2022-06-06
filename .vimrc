@@ -1,3 +1,14 @@
+" === FOR GVIM ===
+
+set guicursor+=n-v-c:blinkon0
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+
+
+
 syntax on
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -11,11 +22,13 @@ set incsearch
 
 set nocompatible
 
+
 call plug#begin()
 
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox' "I hear community version is better
+"Plug 'gruvbox-community/gruvbox' 
 Plug 'arcticicestudio/nord-vim'
-Plug 'sjl/badwolf'
+Plug 'sjl/badwolf' 
 Plug 'jnurmine/Zenburn'
 Plug 'sonph/onehalf'
 Plug 'gosukiwi/vim-atom-dark'
@@ -26,23 +39,38 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/bash-support.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'dracula/vim'
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' " syntax highlighting
 Plug 'wojciechkepka/vim-github-dark'
 Plug 'altercation/vim-colors-solarized'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'fxn/vim-monochrome'
+Plug 'romgrk/doom-one.vim'
+Plug 'croaker/mustang-vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'bluz71/vim-moonfly-colors'
 
 call plug#end()
+
 
 set background=dark
 set termguicolors
 
 syntax enable
-set background=dark
+"set background=dark
 "colorscheme base16-brewer
-colorscheme base16-ocean
 "colorscheme paramount
 "colorscheme monochrome
+colorscheme gruvbox
+"colorscheme zenburn
+"colorscheme base16-atelier-sulphurpool
+"colorscheme base16-outrun-dark
+"colorscheme base16-phd
+"colorscheme base16-ocean
+"colorscheme base16-onedark
+"colorscheme palenight
+"colorscheme mustang
+"colorscheme moonfly
+"colorscheme base16-oceanicnext
 
 
 "   === Split divider color [HORIZONTAL] ===
@@ -54,7 +82,8 @@ hi statuslinenc ctermfg=Black cterm=underline
 "hi vertsplit    ctermfg=fg  cterm=NONE
 
 "   === Split divider color ===
-highlight VertSplit guibg=2B303B guifg=Black ctermbg=6 ctermfg=0
+"highlight VertSplit guibg=2B303B guifg=Black ctermbg=6 ctermfg=0
+highlight VertSplit guifg=Black ctermbg=6 ctermfg=0
 
 "	=== Map autocompleate to <tab> ===
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
@@ -69,7 +98,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
