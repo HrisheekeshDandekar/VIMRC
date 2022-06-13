@@ -6,7 +6,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'rust-lang/rust.vim'
 Plug 'preservim/tagbar'
 Plug 'universal-ctags/ctags'
-Plug 'luochen1991/rainbow'
+Plug 'luochen1990/rainbow'
 Plug 'vim-syntastic/syntastic'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
@@ -17,7 +17,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'sjl/badwolf' 
 Plug 'jnurmine/Zenburn'
 Plug 'sonph/onehalf'
-Plug 'gosukiwi/vim-atom-dark'
+Plug 'gosukiwi/vim-atom-dark'woeusb woeusb-frontend-wxgtk
 Plug 'chriskempson/base16-vim'
 Plug 'rakr/vim-one'
 Plug 'GrzegorzKozub/vimdows'
@@ -34,20 +34,40 @@ Plug 'romgrk/doom-one.vim'
 Plug 'croaker/mustang-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-moonfly-colors'
-"Plug 'ntpeters/vim-better-whitespace'
+Plug 'sainnhe/everforest'
+Plug 'bulbalion/vim_colo_dark_green_elf'
+Plug 'pgdouyon/vim-yin-yang'
+Plug 'karoliskoncevicius/oldbook-vim'
+Plug 'haystackandroid/seabird'
 call plug#end()
 
 " Get syntax files from config folder
 set runtimepath+=~/.config/nvim/syntax
 
+
 " Theme
+
+"Syntax highlighting for asm
+"set ft=nasm
+
+"let g:airline_theme="dracula"
+let g:airline_theme="moonfly"
+
 set guicursor=i:block
 set termguicolors " Set cursor to block even in insert mode
+set background=dark
+"colorscheme gruvbox
 "colorscheme base16-ocean
 "colorscheme base16-circus
 "colorscheme zenburn
-colorscheme base16-zenburn
-"colorscheme gruvbox
+"colorscheme base16-zenburn
+"colorscheme nord
+"colorscheme everforest
+"colorscheme oldbook
+"colorscheme yin
+"colorscheme elf
+"colorscheme petrel
+colorscheme moonfly
 
 " Disable C-z from job-controlling neovim
 nnoremap <c-z> <nop>
@@ -107,7 +127,6 @@ augroup jdh8_ft
   au!
   autocmd BufNewFile,BufRead *.asm    set filetype=jdh8
 augroup END
-
 " SQL++ == SQL
 augroup sqlpp_ft
   au!
@@ -296,6 +315,3 @@ let g:lightline = {
 	\ }
 
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
-
-
-
